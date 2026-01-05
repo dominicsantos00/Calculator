@@ -1,0 +1,107 @@
+:root {
+    --bg-color: #050505;
+    --calc-bg: #121212;
+    --display-bg: #1a1a1a;
+    --neon-blue: #00d2ff;
+    --neon-pink: #ff007f;
+    --neon-amber: #ffaa00;
+    --text-white: #e0e0e0;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    /* Subtle grid pattern background */
+    background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+#calculator {
+    font-family: 'Orbitron', sans-serif; /* A futuristic font */
+    background-color: var(--calc-bg);
+    border-radius: 20px;
+    max-width: 420px;
+    padding: 10px;
+    border: 2px solid #333;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8), 
+                inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+#display {
+    width: 100%;
+    padding: 30px 20px;
+    font-size: 3.5rem;
+    text-align: right; /* Standard for calculators */
+    border: none;
+    background-color: var(--display-bg);
+    color: var(--neon-blue);
+    box-sizing: border-box;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    /* Glowing text effect */
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+    font-family: 'Courier New', monospace;
+    letter-spacing: -2px;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 10px;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px; /* Squircle shape looks more modern than circles */
+    border: 1px solid #222;
+    background: linear-gradient(145deg, #1e1e1e, #111);
+    color: var(--text-white);
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 5px 5px 10px #0a0a0a, 
+                -2px -2px 5px rgba(255,255,255,0.02);
+}
+
+/* Hover effect: Glow the border */
+button:hover {
+    border-color: var(--neon-blue);
+    color: var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+/* Pressed effect: "Inward" shadow */
+button:active {
+    box-shadow: inset 4px 4px 10px #050505;
+    transform: scale(0.95);
+}
+
+/* Special styling for Operators */
+.operator-btn {
+    color: var(--neon-amber);
+    background: linear-gradient(145deg, #222, #111);
+}
+
+.operator-btn:hover {
+    border-color: var(--neon-amber);
+    color: var(--neon-amber);
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.3);
+}
+
+/* Make the Equal button pop */
+button:last-child {
+    background: linear-gradient(145deg, #ff007f, #b30059);
+    color: white;
+    border: none;
+}
+
+button:last-child:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.5);
+}

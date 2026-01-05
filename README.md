@@ -5,3 +5,4 @@
 Clear (AC): Use the “AC” or “C” button to wipe the current calculation.
 
 Result: Press the = key to execute the logic. The calculator follows standard BODMAS/PEMDAS rules.
+
